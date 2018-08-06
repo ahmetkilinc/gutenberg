@@ -121,7 +121,7 @@ body.gutenberg-editor-page {
 	}
 }
 
-// Override core input styles to provide ones consistent with Gutenberg.
+// Override core input styles to provide styles consistent with Gutenberg.
 // @todo Submit as upstream patch as well.
 .edit-post-sidebar,
 .editor-post-publish-panel,
@@ -180,13 +180,13 @@ body.gutenberg-editor-page {
 			box-shadow: 0 0 0 1px $dark-gray-300;
 		}
 
-		&:checked:focus {
-			box-shadow: 0 0 0 2px $dark-gray-500;
-		}
-
 		&:checked {
 			background: theme( toggle );
 			border-color: theme( toggle );
+		}
+
+		&:checked:focus {
+			box-shadow: 0 0 0 2px $dark-gray-500;
 		}
 
 		&:before {
