@@ -121,13 +121,13 @@ body.gutenberg-editor-page {
 	}
 }
 
-// Override core input styles to provide ones consistent with Gutenberg
-// @todo submit as upstream patch as well
+// Override core input styles to provide ones consistent with Gutenberg.
+// @todo Submit as upstream patch as well.
 .edit-post-sidebar,
 .editor-post-publish-panel,
 .editor-block-list__block,
 .components-popover {
-	.input-control, // upstream name is .regular-text
+	.input-control, // Upstream name is `.regular-text`.
 	input[type=text],
 	input[type=search],
 	input[type=radio],
@@ -166,6 +166,32 @@ body.gutenberg-editor-page {
 			// Windows High Contrast mode will show this outline
 			outline: 2px solid transparent;
 			outline-offset: 0;
+		}
+	}
+
+	input[type=checkbox] {
+		border: 2px solid $dark-gray-300;
+		border-radius: $radius-round-rectangle / 2;
+		margin-right: 12px;
+		transition: none;
+
+		&:focus {
+			border-color: $dark-gray-300;
+			box-shadow: 0 0 0 1px $dark-gray-300;
+		}
+
+		&:checked:focus {
+			box-shadow: 0 0 0 2px $dark-gray-500;
+		}
+
+		&:checked {
+			background: theme( toggle );
+			border-color: theme( toggle );
+		}
+
+		&:before {
+			margin: -4px 0 0 -5px;
+			color: $white;
 		}
 	}
 }
